@@ -11,6 +11,8 @@ namespace EmployeePayroll_MultiThreading
     using System.Data;
     using System.Data.SqlClient;
     using System.Text;
+    using System.Threading;
+    using System.Threading.Tasks;
 
     public class EmployeePayrollOperation
     {
@@ -31,6 +33,27 @@ namespace EmployeePayroll_MultiThreading
                     return false;
             }
             return true;
+        }
+
+        /// <summary>
+        /// UC 2 : Adds the employee list to database using thread.
+        /// </summary>
+        /// <param name="employeeList">The employee list.</param>
+        public void AddEmployeeListToDataBaseWithThread(List<EmployeeModel> employeeList)
+        {
+            employeeList.ForEach(employeeData =>
+            {
+                //For each employeeData present in list new thread is created and all threads run according
+                //to the time slot assigned by the thread scheduler
+                Task thread = new Task(() =>
+                {
+                    Console.WriteLine("Current thread id: "+Thread.CurrentThread.ManagedThreadId);
+                    Console.WriteLine("Employee Being added" + employeeData.EmployeeName);
+                    this.AddEmployeeToDatabase(employeeData);
+                    Console.WriteLine("Employee added:" + employeeData.EmployeeName);
+                });
+                thread.Start();
+            });
         }
 
         /// <summary>
