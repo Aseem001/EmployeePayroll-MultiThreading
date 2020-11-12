@@ -18,6 +18,8 @@ namespace EmployeePayroll_MultiThreading
     {
         public static SqlConnection connection { get; set; }
 
+        NLog nLog = new NLog();
+
         /// <summary>
         /// Mutex is mutual exclusion used to synchronise the threads
         /// Similar to locks
@@ -32,9 +34,11 @@ namespace EmployeePayroll_MultiThreading
         {
             foreach(var employee in employeeList)
             {
+                nLog.LogDebug($"Adding the Employee: {employee.EmployeeName} via ThreadID: {Thread.CurrentThread.ManagedThreadId}");
                 Console.WriteLine("Employee being added:" + employee.EmployeeName);
                 bool flag = AddEmployeeToDatabase(employee);
                 Console.WriteLine("Employee added:" + employee.EmployeeName);
+                nLog.LogInfo($"Employee {employee.EmployeeName} added in Database via ThreadId: " + Thread.CurrentThread.ManagedThreadId);
                 if (flag == false)
                     return false;
             }
@@ -49,6 +53,7 @@ namespace EmployeePayroll_MultiThreading
         {
             employeeList.ForEach(employeeData =>
             {
+                nLog.LogDebug($"Adding the Employee: {employeeData.EmployeeName} without synchronization via ThreadID: {Thread.CurrentThread.ManagedThreadId}");
                 //For each employeeData present in list new thread is created and all threads run according
                 //to the time slot assigned by the thread scheduler
                 Thread thread = new Thread(() =>
@@ -57,6 +62,7 @@ namespace EmployeePayroll_MultiThreading
                     Console.WriteLine("Employee Being added" + employeeData.EmployeeName);
                     AddEmployeeToDatabase(employeeData);                    
                     Console.WriteLine("Employee added:" + employeeData.EmployeeName);
+                    nLog.LogInfo($"Employee {employeeData.EmployeeName} added in Database without synchronization via ThreadId: " + Thread.CurrentThread.ManagedThreadId);
                 });
                 thread.Start();
             });
@@ -78,10 +84,12 @@ namespace EmployeePayroll_MultiThreading
                     lock (employeeData)
                     {
                         //mutex.WaitOne();
+                        nLog.LogDebug($"Adding the Employee: {employeeData.EmployeeName} using synchronization via ThreadID: {Thread.CurrentThread.ManagedThreadId}");
                         Console.WriteLine("Current thread id: " + Thread.CurrentThread.ManagedThreadId);
                         Console.WriteLine("Employee Being added" + employeeData.EmployeeName);
                         this.AddEmployeeToDatabase(employeeData);
                         Console.WriteLine("Employee added:" + employeeData.EmployeeName);
+                        nLog.LogInfo($"Employee {employeeData.EmployeeName} added in Database using synchronization via ThreadId: " + Thread.CurrentThread.ManagedThreadId);
                         //mutex.ReleaseMutex();
                     }
                 });
