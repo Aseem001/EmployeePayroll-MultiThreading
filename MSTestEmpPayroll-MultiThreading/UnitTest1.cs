@@ -108,5 +108,24 @@ namespace MSTestEmpPayroll_MultiThreading
             s.Stop();
             Console.WriteLine("Elapsed time using threads with synchronization: " + s.ElapsedMilliseconds);
         }
+
+        /// <summary>
+        /// TC 6 : Given the employee list update salary to multiple tables using threads with synchronization.
+        /// </summary>
+        [TestMethod]
+        public void GivenEmployeeList_UpdateSalaryToMultipleTablesUsingThreadsWithSynchronization()
+        {
+            //Arrange
+            List<EmployeeModel> employeeList = new List<EmployeeModel>();
+            employeeList.Add(new EmployeeModel(employeeName: "Kohli", startDate: new System.DateTime(2019, 08, 01), phoneNumber: 4567876543, address: "Bangalore", department: "HR", gender: "M", basicPay: 45, deductions: 56, taxablePay: 34, tax: 56, netPay: 67));
+            employeeList.Add(new EmployeeModel(employeeName: "Mandhana", startDate: new System.DateTime(2019, 02, 01), phoneNumber: 3456765434, address: "Delhi", department: "Marketing", gender: "F", basicPay: 78, deductions: 56, taxablePay: 78, tax: 56, netPay: 34));
+            Stopwatch s = new Stopwatch();
+
+            //Act
+            s.Start();
+            empOperation.UpdateSalaryDetailsUsingThreadsWithSync(employeeList);
+            s.Stop();
+            Console.WriteLine("Elapsed time using threads with synchronization: " + s.ElapsedMilliseconds);
+        }
     }
 }
