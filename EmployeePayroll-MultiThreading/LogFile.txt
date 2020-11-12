@@ -28,3 +28,45 @@
 2020-11-12 16:40:43.2596 INFO Employee Mandhana added in Database using synchronization via ThreadId: 10
 2020-11-12 16:40:43.2596 DEBUG Adding the Employee: Chahal using synchronization via ThreadID: 10
 2020-11-12 16:40:43.2788 INFO Employee Chahal added in Database using synchronization via ThreadId: 10
+2020-11-12 16:43:59.5950 DEBUG Adding the Employee: Kohli without synchronization via ThreadID: 4
+2020-11-12 16:43:59.6225 DEBUG Adding the Employee: Dhoni without synchronization via ThreadID: 4
+2020-11-12 16:43:59.6225 DEBUG Adding the Employee: Rohit without synchronization via ThreadID: 4
+2020-11-12 16:43:59.6414 DEBUG Adding the Employee: Mandhana without synchronization via ThreadID: 4
+2020-11-12 16:43:59.6516 DEBUG Adding the Employee: Chahal without synchronization via ThreadID: 4
+2020-11-12 16:44:21.8602 DEBUG Adding the Employee: Kohli without synchronization via ThreadID: 4
+2020-11-12 16:44:21.8862 DEBUG Adding the Employee: Dhoni without synchronization via ThreadID: 4
+2020-11-12 16:44:21.8862 DEBUG Adding the Employee: Rohit without synchronization via ThreadID: 4
+2020-11-12 16:44:21.8999 DEBUG Adding the Employee: Mandhana without synchronization via ThreadID: 4
+2020-11-12 16:44:21.8999 DEBUG Adding the Employee: Chahal without synchronization via ThreadID: 4
+2020-11-12 16:45:16.5667 DEBUG Adding the Employee: Kohli without synchronization via ThreadID: 4
+2020-11-12 16:45:16.5926 DEBUG Adding the Employee: Dhoni without synchronization via ThreadID: 4
+2020-11-12 16:45:16.5926 DEBUG Adding the Employee: Rohit without synchronization via ThreadID: 4
+2020-11-12 16:45:16.6083 DEBUG Adding the Employee: Mandhana without synchronization via ThreadID: 4
+2020-11-12 16:45:16.6083 DEBUG Adding the Employee: Chahal without synchronization via ThreadID: 4
+2020-11-12 16:45:16.7402 INFO Employee Kohli added in Database without synchronization via ThreadId: 12
+2020-11-12 16:45:16.7402 INFO Employee Dhoni added in Database without synchronization via ThreadId: 13
+2020-11-12 16:45:16.7431 INFO Employee Rohit added in Database without synchronization via ThreadId: 14
+2020-11-12 16:45:16.7431 INFO Employee Mandhana added in Database without synchronization via ThreadId: 15
+2020-11-12 16:45:16.7431 INFO Employee Chahal added in Database without synchronization via ThreadId: 16
+2020-11-12 17:29:54.4537 DEBUG Adding the Employee: Kohli using synchronization via ThreadID: 11
+2020-11-12 17:31:24.3327 DEBUG Adding the Employee: Kohli using synchronization via ThreadID: 11
+2020-11-12 17:32:39.5038 DEBUG Adding the Employee: Kohli using synchronization via ThreadID: 11
+2020-11-12 17:32:39.7416 INFO Employee Kohli added in Database using synchronization via ThreadId: 11
+2020-11-12 17:32:39.7521 DEBUG Adding the Employee: Dhoni using synchronization via ThreadID: 11
+2020-11-12 17:32:39.7666 INFO Employee Dhoni added in Database using synchronization via ThreadId: 11
+2020-11-12 17:32:39.7763 DEBUG Adding the Employee: Rohit using synchronization via ThreadID: 11
+2020-11-12 17:32:39.7763 INFO Employee Rohit added in Database using synchronization via ThreadId: 11
+2020-11-12 17:32:39.8004 DEBUG Adding the Employee: Mandhana using synchronization via ThreadID: 11
+2020-11-12 17:32:39.8161 INFO Employee Mandhana added in Database using synchronization via ThreadId: 11
+2020-11-12 17:32:39.8357 DEBUG Adding the Employee: Chahal using synchronization via ThreadID: 11
+2020-11-12 17:32:39.8578 INFO Employee Chahal added in Database using synchronization via ThreadId: 11
+2020-11-12 17:33:14.9497 DEBUG Adding the Employee: Kohli using synchronization via ThreadID: 11
+2020-11-12 17:33:15.1716 INFO Employee Kohli added in Database using synchronization via ThreadId: 11
+2020-11-12 17:33:15.1716 DEBUG Adding the Employee: Dhoni using synchronization via ThreadID: 11
+2020-11-12 17:33:15.1860 INFO Employee Dhoni added in Database using synchronization via ThreadId: 11
+2020-11-12 17:33:15.1860 DEBUG Adding the Employee: Rohit using synchronization via ThreadID: 11
+2020-11-12 17:33:15.1980 INFO Employee Rohit added in Database using synchronization via ThreadId: 11
+2020-11-12 17:33:15.1980 DEBUG Adding the Employee: Mandhana using synchronization via ThreadID: 11
+2020-11-12 17:33:15.2127 INFO Employee Mandhana added in Database using synchronization via ThreadId: 11
+2020-11-12 17:33:15.2298 DEBUG Adding the Employee: Chahal using synchronization via ThreadID: 11
+2020-11-12 17:33:15.2517 INFO Employee Chahal added in Database using synchronization via ThreadId: 11
